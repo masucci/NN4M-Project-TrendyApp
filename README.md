@@ -24,9 +24,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]]
 
 In this project, I've displayed all the items in a TableView. I also added some features like, Dark mode, different labels that gave a UX/UI more affordable for the user. I also added the Reachability file (provided by Ashley Mills https://github.com/ashleymills/Reachability.swift) that gave me the possibility to inform the user, with a different screen, if there is no connection.
+
+I added some style creating a logo with illustrator and choosing a the right color palette for the target market.
 
 I was careful to write a clean code using refactoring after the first time. Hoping that is good for you. Thanks a lot.:smile:
 
@@ -34,6 +36,12 @@ I was careful to write a clean code using refactoring after the first time. Hopi
 The project was entirely coded in Swift.
 * [Swift](https://swift.org/)
 * [UIKit](https://developer.apple.com/documentation/uikit)
+
+### Contact me
+For more information about me, here you can find some contacts:
+* [Website] (https://www.lorenzomasucci.fun/)
+* [Linkedin] (https://www.linkedin.com/in/lorenzo-masucci/)
+* [Email](mailto:lorenzo.masucci@outlook.com)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
