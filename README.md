@@ -39,9 +39,9 @@ The project was entirely coded in Swift.
 
 ### Contact me
 For more information about me, here you can find some contacts:
-* [Website] (https://www.lorenzomasucci.fun/)
-* [Linkedin] (https://www.linkedin.com/in/lorenzo-masucci/)
-* [Email](mailto:lorenzo.masucci@outlook.com)
+* :link: Website: (https://www.lorenzomasucci.fun/)
+* :bust_in_silhouette: Linkedin: (https://www.linkedin.com/in/lorenzo-masucci/)
+* [:email:  Email](mailto:lorenzo.masucci@outlook.com)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
