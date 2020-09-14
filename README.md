@@ -26,7 +26,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-In this project, I've displayed all the items in a TableView. I also added some features like, Dark mode, different labels for improving the UX/UI. I also added the Reachability file (provided by Ashley Mills https://github.com/ashleymills/Reachability.swift) that gave me the possibility to inform the user, with a different screen, if there is no connection.
+In this project, I've displayed all the items in a TableView. I also added some features like, Dark mode, different labels to improve the UX/UI. I also added the Reachability file (provided by Ashley Mills https://github.com/ashleymills/Reachability.swift) that gave me the possibility to inform the user, with a different screen, if there is no connection.
 
 I added some style creating a logo with illustrator and choosing a the right color palette for the target market.
 
