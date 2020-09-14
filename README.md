@@ -39,4 +39,4 @@ The project was entirely coded in Swift.
 <!-- MARKDOWN LINKS & IMAGES -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lorenzo-masucci/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/example.png
