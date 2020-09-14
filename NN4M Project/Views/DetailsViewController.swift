@@ -9,8 +9,8 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
-
+    
+    
     
     @IBOutlet weak var imageZoomed: UIImageView!
     @IBOutlet weak var imageLabel: UILabel!
@@ -24,19 +24,15 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         imageZoomed.image = imageDetail
         imageLabel.text = labelDetail
         labelPrice.text = labelCost
+        likeCount.text = "\u{2665} \(Int.random(in: 1...100)) TIMES"
         
         addItemButton.layer.cornerRadius = 10
-
-//   Adding SFSymbols into string
-        let imageAttachment = NSTextAttachment()
-        imageAttachment.image = UIImage(systemName: "heart.fill")
-        let fullString = NSMutableAttributedString(attachment: imageAttachment)
-        fullString.append(NSAttributedString(string: "\(Int.random(in: 1...100)) TIMES"))
-        likeCount.attributedText = fullString
+        
     }
-
+    
+    
 }

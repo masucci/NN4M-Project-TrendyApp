@@ -10,10 +10,11 @@ import UIKit
 
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var viewNoConnection: UIView!
     
     var articles = [Article](){
         didSet{
@@ -21,16 +22,56 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-
+    let reachability = try! Reachability()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        downloadJSON()
+        
+        downloadJSON()        
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.reloadData()
+ 
+        reachability.whenUnreachable = { _ in
+            print("Not reachable")
+            self.viewNoConnection.isHidden = false
+            
+        }
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+        
     }
     
+    
+    func downloadJSON(){
+        
+        URLSession.shared.dataTask(with: URLHelper.getCatalog()) { (data, response, error) in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                var result: Products?
+                do {
+                    result = try JSONDecoder().decode(Products.self, from: data)
+                    for element in (result!.Products) {
+                        self.articles.append(element)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }     
+        }.resume()
+    }
+    
+}
+
+// MARK:- TableViewDelegate & TableViewDataSource
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
@@ -48,14 +89,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.trendingLabel.isHidden = true
         }
         
-        
-        let defaultLink = "https://images.riverisland.com/is/image/RiverIsland/"
-        let name = articles[indexPath.row].name
-        let nameLink = name.replacingOccurrences(of: " ", with: "-")
-        let completeLink = defaultLink + nameLink + "_" + articles[indexPath.row].prodid + "_main"
-
-        cell.tableImage.downloaded(from: completeLink)
-        
+        cell.tableImage.downloaded(from: URLHelper.getMainImg(articleName: articles[indexPath.row].name, prodId: articles[indexPath.row].prodid))
         
         return cell
     }
@@ -67,52 +101,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if let imageData = NSData(contentsOf: URL(string: articles[indexPath.row].allImages[0])!) {
             vc?.imageDetail = UIImage(data: imageData as Data)!
-            }
+        }
         
         self.navigationController?.pushViewController(vc!, animated: true)
         
     }
-    
-
-    
-    func downloadJSON(){
-        
-        guard let url = URL(string: "https://static-ri.ristack-3.nn4maws.net/v1/plp/en_gb/2506/products.json")
-            else {
-                print("invalid URL")
-                return
-        }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            guard let data = data, error == nil else {
-                return
-            }
-            
-            DispatchQueue.main.async {
-                
-                var result: Products?
-                
-                do {
-                    result = try? JSONDecoder().decode(Products.self, from: data)
-                    
-                    for element in (result!.Products) {
-                        self.articles.append(element)
-                    }
-
-                } catch {
-                    print(error.localizedDescription)
-                }
-
-            }
-
-        }.resume()
-    }
-    
-    
 }
 
-
+// MARK: - UIImageview Extension
 
 extension UIImageView {
     
@@ -130,10 +126,5 @@ extension UIImageView {
                 
             }
         }.resume()
-    }
-    
-    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url, contentMode: mode)
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8842FE64250F5DBC00F6D7AD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842FE63250F5DBC00F6D7AD /* Article.swift */; };
+		884D5B44250E942100ADD564 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884D5B43250E942100ADD564 /* URLHelper.swift */; };
 		8854276B250BB2000015C1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854276A250BB2000015C1C4 /* AppDelegate.swift */; };
 		8854276D250BB2000015C1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854276C250BB2000015C1C4 /* SceneDelegate.swift */; };
 		8854276F250BB2000015C1C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854276E250BB2000015C1C4 /* ViewController.swift */; };
@@ -15,10 +17,13 @@
 		88542777250BB2050015C1C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88542775250BB2050015C1C4 /* LaunchScreen.storyboard */; };
 		8854277F250BB4B40015C1C4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854277E250BB4B40015C1C4 /* DetailsViewController.swift */; };
 		88542781250BB5950015C1C4 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88542780250BB5950015C1C4 /* Products.swift */; };
+		88800087250F6AE0001FE138 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88800086250F6AE0001FE138 /* Reachability.swift */; };
 		88C2B0C4250E2A8F00AB9285 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C2B0C3250E2A8F00AB9285 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8842FE63250F5DBC00F6D7AD /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		884D5B43250E942100ADD564 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
 		88542767250BB2000015C1C4 /* NN4M Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NN4M Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8854276A250BB2000015C1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8854276C250BB2000015C1C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +34,7 @@
 		88542778250BB2050015C1C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8854277E250BB4B40015C1C4 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		88542780250BB5950015C1C4 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		88800086250F6AE0001FE138 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		88C2B0C3250E2A8F00AB9285 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8842FE65250F5DD900F6D7AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88542780250BB5950015C1C4 /* Products.swift */,
+				8842FE63250F5DBC00F6D7AD /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		884D5B45250F55A400ADD564 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88C2B0C3250E2A8F00AB9285 /* TableViewCell.swift */,
+				8854277E250BB4B40015C1C4 /* DetailsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8854275E250BB2000015C1C4 = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +88,25 @@
 			children = (
 				8854276A250BB2000015C1C4 /* AppDelegate.swift */,
 				8854276C250BB2000015C1C4 /* SceneDelegate.swift */,
-				8854276E250BB2000015C1C4 /* ViewController.swift */,
-				88C2B0C3250E2A8F00AB9285 /* TableViewCell.swift */,
-				8854277E250BB4B40015C1C4 /* DetailsViewController.swift */,
+				88800088250F9AF6001FE138 /* Controller */,
+				8842FE65250F5DD900F6D7AD /* Model */,
+				884D5B45250F55A400ADD564 /* Views */,
+				884D5B43250E942100ADD564 /* URLHelper.swift */,
+				88800086250F6AE0001FE138 /* Reachability.swift */,
 				88542770250BB2000015C1C4 /* Main.storyboard */,
-				88542780250BB5950015C1C4 /* Products.swift */,
 				88542773250BB2050015C1C4 /* Assets.xcassets */,
 				88542775250BB2050015C1C4 /* LaunchScreen.storyboard */,
 				88542778250BB2050015C1C4 /* Info.plist */,
 			);
 			path = "NN4M Project";
+			sourceTree = "<group>";
+		};
+		88800088250F9AF6001FE138 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8854276E250BB2000015C1C4 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884D5B44250E942100ADD564 /* URLHelper.swift in Sources */,
+				8842FE64250F5DBC00F6D7AD /* Article.swift in Sources */,
 				8854276F250BB2000015C1C4 /* ViewController.swift in Sources */,
 				8854276B250BB2000015C1C4 /* AppDelegate.swift in Sources */,
 				88542781250BB5950015C1C4 /* Products.swift in Sources */,
+				88800087250F6AE0001FE138 /* Reachability.swift in Sources */,
 				88C2B0C4250E2A8F00AB9285 /* TableViewCell.swift in Sources */,
 				8854276D250BB2000015C1C4 /* SceneDelegate.swift in Sources */,
 				8854277F250BB4B40015C1C4 /* DetailsViewController.swift in Sources */,
