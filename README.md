@@ -17,7 +17,7 @@
     <a href="https://github.com/masucci/NN4M-Project-TrendyApp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://drive.google.com/file/d/1T1tnrsAsHFcNBL3KZewZvSwufP5i3Khl/view?usp=sharing">View Demo</a>
   </p>
 </p>
 
