@@ -1,20 +1,20 @@
-# NN4M-Project-TrendyApp
+# Project-TrendyApp
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/masucci/NN4M-Project-TrendyApp">
+  <a href="https://github.com/masucci/Project-TrendyApp">
     <img src="images/logo.png" alt="Logo" width="180" height="180">
   </a>
 
   <h3 align="center">Trendy App</h3>
 
   <p align="center">
-    A project for NN4M by Lorenzo Masucci
+    A project by Lorenzo Masucci
     <br />
-    <a href="https://github.com/masucci/NN4M-Project-TrendyApp"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/masucci/Project-TrendyApp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://drive.google.com/file/d/1T1tnrsAsHFcNBL3KZewZvSwufP5i3Khl/view?usp=sharing">View Demo</a>
@@ -30,7 +30,7 @@ In this project, I've displayed all the items in a TableView. I also added some 
 
 The logo was created with illustrator.
 
-I was careful to write a clean code, refactoring and do some improvements after the first writing. Hoping that is good for you. Thanks a lot.:smile:
+I was careful to write a clean code, refactoring and do some improvements after the first writing. :smile:
 
 ### Built With
 The project was entirely coded in Swift.
